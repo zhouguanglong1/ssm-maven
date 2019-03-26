@@ -26,6 +26,14 @@
     <modules>
         <module>oauth2</module>
         <module>ssm-demo</module>
+        <module>distributed-tools</module>
+        <module>multi-thread</module>
+        <module>kafka-demo</module>
+        <module>java-design-pattern-demo</module>
+        <module>spring-session-redis</module>
+        <module>wxpay-demo</module>
+        <module>springboot-mail</module>
+        <module>netty-demo</module>
     </modules>
 
     <properties>

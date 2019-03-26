@@ -1,0 +1,17 @@
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: 129.204.109.228:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: zhougl
+#      auto-offset-reset: earliest
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      bootstrap-servers: 129.204.109.228:9092
+      batch-size: 16384
+      acks: "all"
+      retries: 0
+      buffer-memory: 33554432

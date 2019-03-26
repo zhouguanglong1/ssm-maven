@@ -26,6 +26,7 @@ public class SessionController extends BashController{
     @RequestMapping(value = "/get")
     public String get(HttpServletRequest request) {
         String userName = (String) request.getSession().getAttribute("userName");
+        System.out.println(userName);
         return userName;
     }
 

@@ -41,6 +41,12 @@ public class DBPool {
 				username= ResourceUtils.getConfigByName("datasourceC.username");
 				password= ResourceUtils.getConfigByName("datasourceC.password");
 				validationQuery=  "select 1";
+			}else if(Globals.test.equals(ds_key)){
+				driverClassName=  ResourceUtils.getConfigByName("datasourceD.driverClassName");
+				url=   ResourceUtils.getConfigByName("datasourceD.url");
+				username= ResourceUtils.getConfigByName("datasourceD.username");
+				password= ResourceUtils.getConfigByName("datasourceD.password");
+				validationQuery=  "select 1";
 			}else{
 				
 				conn = getConnection();

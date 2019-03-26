@@ -12,7 +12,7 @@ import java.io.IOException;
  * @author zhougl
  * 2018/9/26
  **/
-@Component
+//@Component
 public class CorsFilter implements Filter{
 
     private static final String TOKEN_HEADER = "X_Auth_Token";

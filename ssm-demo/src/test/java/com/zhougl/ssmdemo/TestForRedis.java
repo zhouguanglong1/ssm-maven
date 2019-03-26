@@ -23,4 +23,6 @@ public class TestForRedis {
         redisTemplate.opsForValue().set("key1","傻逼");
     }
 
+
+
 }

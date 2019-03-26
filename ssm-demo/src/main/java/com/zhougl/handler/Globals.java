@@ -58,5 +58,6 @@ public class Globals {
 	public static final String smsweb = "smsweb";
 	public static final String webdb = "webdb";
     public static final String thing2thing = "thing2thing";
+    public static final String test = "test";
     /****业务模块使用的全局变量结束************************************/
 }

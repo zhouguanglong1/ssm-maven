@@ -20,8 +20,11 @@ public class InterviewTest {
     public static void main(String[] args){
         int s = 12973434%10000;
         String string = "dfsdf -010";
+        string.length();
         string = string.trim();
         System.out.println(string);
         System.out.println(s);
+        String[] strings = {"34","23","12"};
+        int length = strings.length;
     }
 }
