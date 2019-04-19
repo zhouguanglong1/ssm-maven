@@ -1,5 +1,6 @@
 package com.zhougl.distributedtools.controller;
 
+import com.zhougl.distributedtools.limit.RedisLimit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class LimitController {
 
     @Autowired
     private RedisTemplate<String,String> redisTemplate;
+
+    @Autowired
+    private RedisLimit redisLimit;
 
     private static Logger logger = LoggerFactory.getLogger(LimitController.class);
 
@@ -42,5 +46,14 @@ public class LimitController {
         logger.info("访问量达到{}",result);
 
 
+    }
+
+    @RequestMapping("v2")
+    public void test1(){
+        if(redisLimit.limit()){
+            System.out.println("放行");
+        }else{
+            System.out.println("被限制访问");
+        }
     }
 }
