@@ -14,17 +14,21 @@ public class GatherThreadPoolExecutor {
     private static Logger log = LoggerFactory.getLogger(GatherThreadPoolExecutor.class);
     private static volatile GatherThreadPoolExecutor instance = null;
 
-    public ThreadPoolExecutor pool = null;
-    private static final int keepAliveTime = 5;
-    private static final int corePoolSize = 16;
-    private static final int workQueue_num = 16;
-    public static final int maximumPoolSize = 32;
+    private ThreadPoolExecutor pool = null;
+    private static final int KEEP_ALIVE_TIME = 5;
+    private static final int CORE_POOL_SIZE = 16;
+    private static final int WORK_QUEUE_NUM = 16;
+    private static final int MAXIMUM_POOL_SIZE = 32;
 
     private GatherThreadPoolExecutor() {
         init();
     }
 
-    //双重检查锁-单例
+
+    /**
+     * 双重检查锁-单例
+     * @return GatherThreadPoolExecutor
+     */
     public static GatherThreadPoolExecutor getInstance(){
         if(instance == null){
             synchronized (GatherThreadPoolExecutor.class){
@@ -48,12 +52,12 @@ public class GatherThreadPoolExecutor {
      * 即当提交第48个任务时(前面线程都没有执行完,此测试方法中用sleep(100)),
      * 任务会交给RejectedExecutionHandler来处理
      */
-    public void init() {
-        if (this.pool == null)
-            pool = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.MINUTES,
-                    new ArrayBlockingQueue<Runnable>(workQueue_num), new GatherThreadFactory(),
+    private void init() {
+        if (this.pool == null) {
+            pool = new ThreadPoolExecutor(CORE_POOL_SIZE, MAXIMUM_POOL_SIZE, KEEP_ALIVE_TIME, TimeUnit.MINUTES,
+                    new ArrayBlockingQueue<Runnable>(WORK_QUEUE_NUM), new GatherThreadFactory(),
                     new GatherRejectedExecutionHandler());
-
+        }
     }
 
     public void destory() {
@@ -66,7 +70,7 @@ public class GatherThreadPoolExecutor {
         return pool.getActiveCount();
     }
 
-    public ExecutorService getCustomThreadPoolExecutor() {
+    private ExecutorService getCustomThreadPoolExecutor() {
         log.debug("当前活动线程数量:" + pool.getActiveCount());
         return this.pool;
     }
@@ -98,7 +102,10 @@ public class GatherThreadPoolExecutor {
         }
     }
 
-    // 测试构造的线程池
+    /**
+     * 测试构造的线程池
+     * @param args 参数
+     */
     public static void main(String[] args) {
         GatherThreadPoolExecutor exec = getInstance();
 
