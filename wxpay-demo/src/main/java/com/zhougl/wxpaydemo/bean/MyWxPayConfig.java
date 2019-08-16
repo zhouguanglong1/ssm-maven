@@ -11,17 +11,17 @@ import java.io.InputStream;
 public class MyWxPayConfig implements WXPayConfig{
     @Override
     public String getAppID() {
-        return "wx82211a43258953be";
+        return "wx123456";
     }
 
     @Override
     public String getMchID() {
-        return "1278245001";
+        return "123456";
     }
 
     @Override
     public String getKey() {
-        return "241cd66b8f834ed581e009b09c618432";
+        return "123456";
     }
 
     @Override
