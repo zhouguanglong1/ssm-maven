@@ -1,0 +1,19 @@
+spring :
+  #data source config
+   datasource :
+    driver : com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/activiti-demo?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username : root
+    password : 123456
+    initsize : 10
+    maxActive : 20
+    minIdle : 10
+    maxWait : 120000
+    poolPreparedStatements : false
+    maxOpenPreparedStatements : -1
+    validationQuery : select 1
+    testOnborrow : true
+    testOnReturn : true
+    testWhileIdle : true
+    timeBetweenEvictionRunsMillis : 120000
+    filters : log4j,stat

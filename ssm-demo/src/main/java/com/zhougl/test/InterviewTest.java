@@ -1,5 +1,8 @@
 package com.zhougl.test;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * @author zhougl
  * 2018/12/11
@@ -26,5 +29,12 @@ public class InterviewTest {
         System.out.println(s);
         String[] strings = {"34","23","12"};
         int length = strings.length;
+
+        List<String> list = new LinkedList<>();
+        list.add("123");
+        list.add("123");
+        list.add("123");
+        list.add("123");
+        System.out.println(list);
     }
 }

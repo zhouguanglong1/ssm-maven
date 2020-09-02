@@ -34,6 +34,7 @@
         <module>wxpay-demo</module>
         <module>springboot-mail</module>
         <module>netty-demo</module>
+        <module>activiti-demo</module>
     </modules>
 
     <properties>
