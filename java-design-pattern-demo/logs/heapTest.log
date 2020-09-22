@@ -1,0 +1,5 @@
+Java HotSpot(TM) 64-Bit Server VM (25.172-b11) for windows-amd64 JRE (1.8.0_172-b11), built on Mar 28 2018 21:21:52 by "java_re" with MS VC++ 10.0 (VS2010)
+Memory: 4k page, physical 16658532k(5726396k free), swap 23169620k(5189224k free)
+CommandLine flags: -XX:-BytecodeVerificationLocal -XX:-BytecodeVerificationRemote -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=C:/develop/personal/ssm-maven/java-design-pattern-demo/logs/heapdump.hprof -XX:InitialHeapSize=1073741824 -XX:+ManagementServer -XX:MaxHeapSize=1073741824 -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:TieredStopAtLevel=1 -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseLargePagesIndividualAllocation -XX:+UseParallelGC 
+1.211: [GC (Metadata GC Threshold) [PSYoungGen: 136376K->14225K(305664K)] 136376K->14305K(1005056K), 0.0118707 secs] [Times: user=0.00 sys=0.00, real=0.01 secs] 
+1.222: [Full GC (Metadata GC Threshold) [PSYoungGen: 14225K->0K(305664K)] [ParOldGen: 80K->13642K(699392K)] 14305K->13642K(1005056K), [Metaspace: 20763K->20761K(1067008K)], 0.0337223 secs] [Times: user=0.11 sys=0.00, real=0.03 secs] 

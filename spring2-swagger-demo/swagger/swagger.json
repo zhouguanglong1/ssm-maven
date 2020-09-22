@@ -1,0 +1,58 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "swagger导入dapi demo",
+    "version" : "v1",
+    "title" : "swagger导入dapi demo",
+    "termsOfService" : "http://www.github.com/kongchen/swagger-maven-plugin",
+    "contact" : {
+      "name" : "zhoujielun",
+      "url" : "www.zhou.com",
+      "email" : "970711665@qq.com"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host" : "petstore.swagger.wordnik.com",
+  "basePath" : "/api",
+  "tags" : [ {
+    "name" : "category"
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/conductor/api/v1/categories" : {
+      "get" : {
+        "tags" : [ "category" ],
+        "summary" : "分页查询分类",
+        "description" : "分页查询分类",
+        "operationId" : "listCategory",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        }
+      }
+    },
+    "/conductor/api/v1/categories/interfaces" : {
+      "get" : {
+        "tags" : [ "category" ],
+        "summary" : "分页查询分类(带接口信息)",
+        "description" : "分页请求分类(带接口信息)",
+        "operationId" : "listCategoryAndInterface",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "object"
+            }
+          }
+        }
+      }
+    }
+  }
+}
