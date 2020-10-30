@@ -1,6 +1,5 @@
 package com.zhougl.web;
 
-import com.deepexi.util.config.Payload;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/tests")
 public class TestBeanController {
-    @PostMapping
-    public Payload queryOrder(TestBean testBean) {
-        TestBeanImpl bean = (TestBeanImpl) testBean;
-        return new Payload(bean);
-    }
+//    @PostMapping
+//    public Payload queryOrder(TestBean testBean) {
+//        TestBeanImpl bean = (TestBeanImpl) testBean;
+//        return new Payload(bean);
+//    }
 }
